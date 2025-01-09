@@ -10,15 +10,11 @@ function isPalindroma(word) {
     return Math.floor(Math.random() * 5) + 1;
   }
   
-  // Funzione per verificare se un numero è pari
+  // Funzione per verificare se un numero è pari\dispari
   function isPari(numero) {
     return numero % 2 === 0;
   }
   
-  // Funzione per verificare se un numero è dispari
-  function isDispari(numero) {
-    return numero % 2 !== 0;
-  }
   
   // Menu per scegliere tra Palindroma o Pari e Dispari
   const sceltaGioco = prompt("Scegli un gioco:\n1. Palindroma\n2. Pari o Dispari");
@@ -49,11 +45,11 @@ function isPalindroma(word) {
         console.log("La somma dei due numeri è:", somma);
   
         const sommaPari = isPari(somma);
-        const sommaDispari = isDispari(somma);
+    
   
         if (sceltaUtente === "pari" && sommaPari) {
           console.log("Hai vinto! La somma è pari.");
-        } else if (sceltaUtente === "dispari" && sommaDispari) {
+        } else if (sceltaUtente === "dispari" && sceltaUtente !== sommaPari) {
           console.log("Hai vinto! La somma è dispari.");
         } else {
           console.log("Hai perso! La somma non corrisponde alla tua scelta.");
